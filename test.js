@@ -1,11 +1,13 @@
 const operations = require('./operations.js');
 const assert = require('assert');
 
-var checksum1 = "ee5f271914df5b40c011825b77e63910";
-var checksum2 = "ee5f271914df5b40c011825b77e63910";
+//Define which file to use in this test
+const filename = 'donald-duck.png';
 
-it('correctly checks if the checksums matches', () => {
-  assert.equal(operations.validateChecksum(checksum1,checksum2), true);
+
+//Test if the input file's checksum matches a given checksum
+it('returns true if the checksums matches', () => {
+	assert.equal(operations.validateChecksum(filename), true);
 });
 
 

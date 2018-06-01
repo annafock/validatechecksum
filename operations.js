@@ -1,10 +1,8 @@
-var fs = require('fs');
-var crypto = require('crypto');
 
-fs.readFile('donald-duck.png', function(err, data) {
-  var checksum = generateChecksum(data);
-  console.log(checksum);
-});
+const crypto = require('crypto');
+const path = require('path');
+
+const originalChecksum = "ee5f271914df5b40c011825b77e63910";
 
 function generateChecksum(str, algorithm, encoding) {
     return crypto
@@ -13,8 +11,13 @@ function generateChecksum(str, algorithm, encoding) {
         .digest(encoding || 'hex');
 }
 
+const validateChecksum = (filename) => {
+	const fs = require('fs');
 
+	const data = fs.readFileSync(filename);
+	const checksum = generateChecksum(data);
 
-const validateChecksum = (x, y) => {return x === y};
+	return (originalChecksum === checksum)	
+};
 
 module.exports = { validateChecksum }
