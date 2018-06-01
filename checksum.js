@@ -1,4 +1,4 @@
-const operations = require('operations.js');
+const operations = require('./operations.js');
 
 const http = require('http');
 const PORT = process.env.PORT || 5000;
