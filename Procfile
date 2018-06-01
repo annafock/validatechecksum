@@ -1,1 +1,1 @@
-web: node checksum.js
+web: npm test
