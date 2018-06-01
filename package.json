@@ -2,7 +2,7 @@
   "name": "validatechecksum",
   "version": "1.0.0",
   "description": "",
-  "main": "operations.js",
+  "main": "checksum.js",
   "scripts": {
     "test": "mocha",
     "start": "nf start"
