@@ -1,13 +1,14 @@
 {
   "name": "validatechecksum",
   "version": "1.0.0",
-  "description": "",
+  "description": "A lambda service that receives a file and validate that its checksum has not changed.",
   "main": "checksum.js",
   "scripts": {
     "test": "mocha",
-    "start": "nf start"
+    "start": "nf start",
+    "startlocal": "node checksum.js"
   },
-  "author": "",
+  "author": "Anna Fock",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^5.2.0"

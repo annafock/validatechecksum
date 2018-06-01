@@ -4,6 +4,7 @@ const path = require('path');
 
 const originalChecksum = "ee5f271914df5b40c011825b77e63910";
 
+//In this case only takes in the first argument 
 function generateChecksum(str, algorithm, encoding) {
     return crypto
         .createHash(algorithm || 'md5')
